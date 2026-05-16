@@ -75,6 +75,10 @@
       padding: 28px 20px 60px;
     }
 
+    .page-shell > * + * {
+      margin-top: 28px;
+    }
+
     .hero {
       position: relative;
       overflow: hidden;
@@ -170,6 +174,62 @@
       font-weight: 600;
     }
 
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      width: 56px;
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-radius: 999px;
+      border: 1px solid rgba(99, 210, 255, 0.24);
+      background: rgba(99, 210, 255, 0.12);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(99, 210, 255, 0.4);
+      background: rgba(99, 210, 255, 0.2);
+    }
+
+    .contact-button.secondary {
+      border-color: rgba(255, 184, 108, 0.24);
+      background: rgba(255, 184, 108, 0.12);
+    }
+
+    .contact-button.secondary:hover {
+      border-color: rgba(255, 184, 108, 0.38);
+      background: rgba(255, 184, 108, 0.2);
+    }
+
+    .contact-button svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .metrics {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -210,7 +270,6 @@
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 22px;
-      margin-top: 22px;
     }
 
     .panel {
@@ -528,7 +587,8 @@
     }
 
     .project-toggle:focus-visible,
-    .tab-button:focus-visible {
+    .tab-button:focus-visible,
+    .contact-button:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
     }
@@ -646,6 +706,34 @@
           <div class="contact-line">
             <span>Phone</span>
             <strong>(587) 937-6233</strong>
+          </div>
+          <div class="contact-actions">
+            <a
+              class="contact-button"
+              href="https://www.linkedin.com/in/junxianlicl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open LinkedIn profile"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 10.17H5.67V18.33H8.34V10.17ZM7 5.91A1.55 1.55 0 1 0 7 9A1.55 1.55 0 0 0 7 5.91ZM18.33 13.35C18.33 10.9 16.78 9.93 15.28 9.93C14.07 9.93 13.53 10.59 13.23 11.06V10.17H10.67V18.33H13.34V13.79C13.34 12.59 13.56 11.42 15.04 11.42C16.5 11.42 16.52 12.79 16.52 13.87V18.33H19.19L18.33 13.35Z"/>
+              </svg>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <a
+              class="contact-button secondary"
+              href="./Charles_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open resume PDF"
+              title="Resume PDF"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H7A2 2 0 0 0 5 4V20A2 2 0 0 0 7 22H17A2 2 0 0 0 19 20V7L14 2ZM13 4.5L16.5 8H13V4.5ZM8.5 12H15.5V13.5H8.5V12ZM8.5 15H15.5V16.5H8.5V15ZM8.5 9H11.5V10.5H8.5V9Z"/>
+              </svg>
+              <span class="sr-only">Resume PDF</span>
+            </a>
           </div>
         </aside>
       </div>
